@@ -36,7 +36,7 @@
             </div>
             <div class="tpl-skiner-content">
                 <div class="tpl-skiner-content-title">
-                    选择主题
+                   	选择主题
                 </div>
                 <div class="tpl-skiner-content-bar">
                     <span class="skiner-color skiner-white" data-color="theme-white"></span>
@@ -65,9 +65,8 @@
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
-       
-                        记住密码
-                         </label>
+       						记住密码
+                        </label>
 
                     </div>
 
