@@ -27,6 +27,23 @@
 <body data-type="login">
     <script src="<%=basePath%>assets/js/theme.js"></script>
     <div class="am-g tpl-g">
+<<<<<<< HEAD
+        <!-- 风格切换 -->
+        <div class="tpl-skiner">
+            <div class="tpl-skiner-toggle am-icon-cog">
+            </div>
+            <div class="tpl-skiner-content">
+                <div class="tpl-skiner-content-title">
+                   	选择主题
+                </div>
+                <div class="tpl-skiner-content-bar">
+                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
+                </div>
+            </div>
+        </div>
+=======
+>>>>>>> branch 'master' of https://github.com/jinhui0109/hotPot
         <div class="tpl-login">
             <div class="tpl-login-content">
                 <div class="tpl-login-logo" style="background: url(<%=basePath%>assets/img/title.png) center no-repeat;max-width: 100%;">
@@ -41,8 +58,14 @@
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
+<<<<<<< HEAD
+       						记住密码
+                        </label>
+
+=======
                       	 记住密码
                          </label>
+>>>>>>> branch 'master' of https://github.com/jinhui0109/hotPot
                     </div>
                     <div class="am-form-group">
                         <button type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">登录</button>
