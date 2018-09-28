@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>登录</title>
+    <title>注册</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
 </head>
 
 <body data-type="login">
-    <script src="<%=basePath%>assets/js/theme.js"></script>
+    <script src="assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 风格切换 -->
         <div class="tpl-skiner">
@@ -46,27 +46,35 @@
         </div>
         <div class="tpl-login">
             <div class="tpl-login-content">
-                <div class="tpl-login-logo" style="background: url(<%=basePath%>assets/img/title.png) center no-repeat;max-width: 100%;">
-
-                </div>
-
+                <div class="tpl-login-title">注册用户</div>
+                <span class="tpl-login-content-info">
+                  创建一个新的用户
+              </span>
 
 
                 <form class="am-form tpl-form-line-form">
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入账号">
+                        <input type="text" class="tpl-form-input" id="user-name" placeholder="邮箱">
 
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
-
+                        <input type="text" class="tpl-form-input" id="user-name" placeholder="用户名">
                     </div>
+
+                    <div class="am-form-group">
+                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
+                    </div>
+
+                    <div class="am-form-group">
+                        <input type="password" class="tpl-form-input" id="user-name" placeholder="再次输入密码">
+                    </div>
+
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
        
-                        记住密码
+                        我已阅读并同意 <a href="javascript:;">《用户注册协议》</a> 
                          </label>
 
                     </div>
