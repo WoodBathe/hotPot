@@ -7,7 +7,6 @@
 %>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,12 +23,11 @@
     <link rel="stylesheet" href="<%=basePath%>assets/css/amazeui.datatables.min.css" />
     <link rel="stylesheet" href="<%=basePath%>assets/css/app.css">
     <script src="<%=basePath%>assets/js/jquery.min.js"></script>
-
 </head>
-
 <body data-type="login">
     <script src="<%=basePath%>assets/js/theme.js"></script>
     <div class="am-g tpl-g">
+<<<<<<< HEAD
         <!-- 风格切换 -->
         <div class="tpl-skiner">
             <div class="tpl-skiner-toggle am-icon-cog">
@@ -44,36 +42,33 @@
                 </div>
             </div>
         </div>
+=======
+>>>>>>> branch 'master' of https://github.com/jinhui0109/hotPot
         <div class="tpl-login">
             <div class="tpl-login-content">
                 <div class="tpl-login-logo" style="background: url(<%=basePath%>assets/img/title.png) center no-repeat;max-width: 100%;">
-
                 </div>
-
-
-
-                <form class="am-form tpl-form-line-form">
+                <form class="am-form tpl-form-line-form" action="<%=basePath%>staff/login.do" method="post">
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入账号">
-
+                        <input type="text" class="tpl-form-input" name="sname" id="user-name" placeholder="请输入用户名">
                     </div>
-
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
-
+                        <input type="password" class="tpl-form-input" name="spassword" id="user-name" placeholder="请输入密码">
                     </div>
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
+<<<<<<< HEAD
        						记住密码
                         </label>
 
+=======
+                      	 记住密码
+                         </label>
+>>>>>>> branch 'master' of https://github.com/jinhui0109/hotPot
                     </div>
-
                     <div class="am-form-group">
-
-                        <button type="button" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
-
+                        <button type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">登录</button>
                     </div>
                 </form>
             </div>
@@ -81,7 +76,5 @@
     </div>
     <script src="<%=basePath%>assets/js/amazeui.min.js"></script>
     <script src="<%=basePath%>assets/js/app.js"></script>
-
 </body>
-
 </html>
