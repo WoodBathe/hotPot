@@ -214,12 +214,12 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/tables.jsp">
+                    <a href="<%=basePath%>jsp/pay.jsp">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/calendar.jsp">
+                    <a href="<%=basePath%>jsp/frontService.jsp">
                         <i class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
                     </a>
                 </li>
@@ -231,7 +231,7 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/table-list-img.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
                             </a>
                         </li>
@@ -375,13 +375,6 @@
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}">
-              <!-- <option value="option1">所有类别</option>
-              <option value="option2">荤菜</option>
-              <option value="option3">蔬菜</option>
-              <option value="option3">水果</option>
-              <option value="option3">丸子</option>
-              <option value="option3">熟菜</option>
-              <option value="option3">蘸酱</option> -->
               
               <option value="option1">所有类别</option>
               <option value="option2">未付款</option>

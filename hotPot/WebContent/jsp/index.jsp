@@ -198,11 +198,11 @@
 						class="am-icon-home sidebar-nav-link-logo"></i> 首页
 				</a></li>
 				<li class="sidebar-nav-link"><a
-					href="<%=basePath%>jsp/tables.jsp"> <i
+					href="<%=basePath%>jsp/pay.jsp"> <i
 						class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
 				</a></li>
 				<li class="sidebar-nav-link"><a
-					href="<%=basePath%>jsp/calendar.jsp"> <i
+					href="<%=basePath%>jsp/frontService.jsp"> <i
 						class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
 				</a></li>
 
@@ -213,7 +213,7 @@
 				</a>
 					<ul class="sidebar-nav sidebar-nav-sub">
 						<li class="sidebar-nav-link"><a
-							href="<%=basePath%>jsp/table-list.jsp"> <span
+							href="<%=basePath%>jsp/table-list-img.jsp"> <span
 								class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
 						</a></li>
 

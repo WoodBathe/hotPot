@@ -213,12 +213,12 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/tables.jsp">
+                    <a href="<%=basePath%>jsp/pay.jsp">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/calendar.jsp">
+                    <a href="<%=basePath%>jsp/frontService.jsp">
                         <i class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
                     </a>
                 </li>
@@ -230,7 +230,7 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/table-list-img.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
                             </a>
                         </li>
@@ -356,8 +356,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title  am-cf">文章列表</div>
-
+                                <div class="widget-title  am-cf">菜品列表</div>
 
                             </div>
                             <div class="widget-body  am-fr">
@@ -366,10 +365,6 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                             </div>
                                         </div>
                                     </div>
@@ -378,12 +373,12 @@
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}">
               <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
+              <option value="option2">荤菜</option>
+              <option value="option3">蔬菜</option>
+              <option value="option3">水果</option>
+              <option value="option3">丸子</option>
+              <option value="option3">熟菜</option>
+              <option value="option3">蘸酱</option>
             </select>
                                     </div>
                                 </div>
@@ -400,11 +395,13 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
-                                                <th>文章缩略图</th>
-                                                <th>文章标题</th>
-                                                <th>作者</th>
-                                                <th>时间</th>
-                                                <th>操作</th>
+                                                <th>图片</th>
+                                                <th>名称</th>
+                                                <th>类别</th>
+                                                <th>进价</th>
+                                                <th>售价</th>
+                                                <th>库存</th>
+                                                <th>是否热门</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -412,9 +409,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
-                                                <td class="am-text-middle">张鹏飞</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">羊肉卷</td>
+                                                <td class="am-text-middle">荤菜</td>
+                                                <td class="am-text-middle">15</td>
+                                                <td class="am-text-middle">34</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -430,9 +430,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">有适配微信小程序的计划吗</td>
-                                                <td class="am-text-middle">天纵之人</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">生菜</td>
+                                                <td class="am-text-middle">蔬菜</td>
+                                                <td class="am-text-middle">13</td>
+                                                <td class="am-text-middle">23</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -448,9 +451,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">请问有没有amazeui 分享插件</td>
-                                                <td class="am-text-middle">王宽师</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">牛肉丸</td>
+                                                <td class="am-text-middle">丸子</td>
+                                                <td class="am-text-middle">23</td>
+                                                <td class="am-text-middle">34</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -466,9 +472,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">关于input输入框的问题</td>
-                                                <td class="am-text-middle">着迷</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">牛肉丸</td>
+                                                <td class="am-text-middle">丸子</td>
+                                                <td class="am-text-middle">23</td>
+                                                <td class="am-text-middle">34</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -484,9 +493,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">有没有发现官网上的下载包不好用</td>
-                                                <td class="am-text-middle">醉里挑灯看键</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">牛肉丸</td>
+                                                <td class="am-text-middle">丸子</td>
+                                                <td class="am-text-middle">23</td>
+                                                <td class="am-text-middle">34</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -503,9 +515,12 @@
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">我建议WEB版本文件引入问题</td>
-                                                <td class="am-text-middle">罢了</td>
-                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">牛肉丸</td>
+                                                <td class="am-text-middle">丸子</td>
+                                                <td class="am-text-middle">23</td>
+                                                <td class="am-text-middle">34</td>
+                                                <td class="am-text-middle">100</td>
+                                                <td class="am-text-middle">热门</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
