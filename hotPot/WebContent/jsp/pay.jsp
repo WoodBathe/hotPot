@@ -375,13 +375,18 @@
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
+              <!-- <option value="option1">所有类别</option>
               <option value="option2">荤菜</option>
               <option value="option3">蔬菜</option>
               <option value="option3">水果</option>
               <option value="option3">丸子</option>
               <option value="option3">熟菜</option>
-              <option value="option3">蘸酱</option>
+              <option value="option3">蘸酱</option> -->
+              
+              <option value="option1">所有类别</option>
+              <option value="option2">未付款</option>
+              <option value="option3">已付款</option>
+              
             </select>
                                     </div>
                                 </div>
