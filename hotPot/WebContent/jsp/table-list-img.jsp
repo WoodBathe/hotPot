@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
+    <title>菜品列表</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -236,7 +236,7 @@
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/form.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 添加菜品
                             </a>
                         </li>
@@ -249,13 +249,13 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/members.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 会员列表
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/addMembers.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 添加会员
                             </a>
                         </li>
@@ -268,7 +268,7 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/orderList.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 订单列表
                             </a>
                         </li>
@@ -327,22 +327,6 @@
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/sign-up.jsp">
-                        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册
-                        <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>
-                    </a>
-                </li>
-                <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/login.jsp">
-                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
-                    </a>
-                </li>
-                <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/404.jsp">
-                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误
-                    </a>
                 </li>
 
             </ul>
@@ -556,7 +540,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <script src="<%=basePath%>assets/js/amazeui.min.js"></script>
     <script src="<%=basePath%>assets/js/app.js"></script>

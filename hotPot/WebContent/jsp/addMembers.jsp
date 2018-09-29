@@ -11,7 +11,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>前台服务</title>
+<title>添加会员</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -184,7 +184,7 @@
 					</div>
 					<span class="user-panel-logged-in-text"> <i
 						class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-						禁言小张
+						小张
 					</span> <a href="javascript:;" class="tpl-user-panel-action-link"> <span
 						class="am-icon-pencil"></span> 账号设置
 					</a>
@@ -197,8 +197,9 @@
 					href="<%=basePath%>jsp/index.jsp" class="active"> <i
 						class="am-icon-home sidebar-nav-link-logo"></i> 首页
 				</a></li>
-				<li class="sidebar-nav-link"><a href="<%=basePath%>jsp/pay.jsp">
-						<i class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
+				<li class="sidebar-nav-link"><a
+					href="<%=basePath%>jsp/pay.jsp"> <i
+						class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
 				</a></li>
 				<li class="sidebar-nav-link"><a
 					href="<%=basePath%>jsp/frontService.jsp"> <i
@@ -299,183 +300,84 @@
 
 		<!-- 内容区域 -->
 		<div class="tpl-content-wrapper">
+
 			<div class="row-content am-cf">
+
+
 				<div class="row">
+
 					<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
 						<div class="widget am-cf">
 							<div class="widget-head am-cf">
-								<div class="widget-title  am-cf">前台服务</div>
-
-
+								<div class="widget-title am-fl">添加菜品</div>
+								<div class="widget-function am-fr">
+									<a href="javascript:;" class="am-icon-cog"></a>
+								</div>
 							</div>
-							<div class="widget-body  am-fr">
+							<div class="widget-body am-fr">
 
-								<div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+								<form class="am-form tpl-form-line-form">
 									<div class="am-form-group">
-										<div class="am-btn-toolbar">
-											<div class="am-btn-group am-btn-group-xs">
-												<button type="button"
-													class="am-btn am-btn-default am-btn-success">
-													<span class="am-icon-plus"></span> 新增
-												</button>
-												<button type="button"
-													class="am-btn am-btn-default am-btn-danger">
-													<span class="am-icon-trash-o"></span> 删除
-												</button>
-											</div>
+										<label for="user-name" class="am-u-sm-3 am-form-label">会员姓名
+											<span class="tpl-form-line-small-title">Name</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入会员姓名">
 										</div>
 									</div>
-								</div>
-								<div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-									<div class="am-form-group tpl-table-list-select">
-										人数：<input type="text">
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">会员性别
+											<span class="tpl-form-line-small-title">Sex</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="radio" value="热门" name="sex">男
+											<input type="radio" value="普通" name="sex">女
+										</div>
 									</div>
-								</div>
-								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-									<div
-										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态"> <span
-											class="am-input-group-btn">
-											<button
-												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-												type="button"></button>
-										</span>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">电话
+											<span class="tpl-form-line-small-title">iPhone</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入电话号码">
+										</div>
 									</div>
-								</div>
-
-								<div class="am-u-sm-12">
-									<table width="100%"
-										class="am-table am-table-compact am-table-striped tpl-table-black "
-										id="example-r">
-										<thead>
-											<tr>
-												<th>桌号</th>
-												<th>桌名</th>
-												<th>可使用的人数</th>
-												<th>是否使用</th>
-												<th>操作</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<!-- more data -->
-										</tbody>
-									</table>
-								</div>
-								<div class="am-u-lg-12 am-cf">
-
-									<div class="am-fr">
-										<ul class="am-pagination tpl-pagination">
-											<li class="am-disabled"><a href="#">«</a></li>
-											<li class="am-active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li><a href="#">»</a></li>
-										</ul>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">积分
+											<span class="tpl-form-line-small-title">Integral</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入积分额度">
+										</div>
 									</div>
-								</div>
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">生日
+											<span class="tpl-form-line-small-title">Birthday</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入生日日期">
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<div class="am-u-sm-9 am-u-sm-push-3">
+											<button type="button"
+												class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>

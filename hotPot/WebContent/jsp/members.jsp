@@ -11,7 +11,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>前台服务</title>
+<title>会员列表</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,7 +304,7 @@
 					<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
 						<div class="widget am-cf">
 							<div class="widget-head am-cf">
-								<div class="widget-title  am-cf">前台服务</div>
+								<div class="widget-title  am-cf">会员列表</div>
 
 
 							</div>
@@ -318,23 +318,19 @@
 													class="am-btn am-btn-default am-btn-success">
 													<span class="am-icon-plus"></span> 新增
 												</button>
-												<button type="button"
-													class="am-btn am-btn-default am-btn-danger">
-													<span class="am-icon-trash-o"></span> 删除
-												</button>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
 									<div class="am-form-group tpl-table-list-select">
-										人数：<input type="text">
+										名字：<input type="text">
 									</div>
 								</div>
 								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
 									<div
 										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态"> <span
+										<input type="text" class="am-form-field " value="性别"> <span
 											class="am-input-group-btn">
 											<button
 												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
@@ -349,90 +345,108 @@
 										id="example-r">
 										<thead>
 											<tr>
-												<th>桌号</th>
-												<th>桌名</th>
-												<th>可使用的人数</th>
-												<th>是否使用</th>
+												<th>ID</th>
+												<th>名字</th>
+												<th>生日</th>
+												<th>性别</th>
+												<th>电话</th>
+												<th>加入时间</th>
+												<th>积分</th>
 												<th>操作</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr class="gradeX">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
 											</tr>
 											<tr class="even gradeC">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
 											</tr>
 											<tr class="gradeX">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
 											</tr>
 											<tr class="even gradeC">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
 											</tr>
 											<tr class="even gradeC">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
@@ -440,16 +454,19 @@
 
 											<tr class="even gradeC">
 												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+												<td>张三</td>
+												<td>1956-03-09</td>
+												<td>男</td>
+												<td>张三13288888888</td>
+												<td>2018-09-29</td>
+												<td>100</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
+															编辑
 														</a> <a href="javascript:;"
 															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
+															class="am-icon-trash"></i> 删除
 														</a>
 													</div>
 												</td>
