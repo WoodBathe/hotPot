@@ -5,14 +5,13 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>前台服务</title>
+<title>订单列表</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -305,7 +304,7 @@
 					<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
 						<div class="widget am-cf">
 							<div class="widget-head am-cf">
-								<div class="widget-title  am-cf">前台服务</div>
+								<div class="widget-title  am-cf">订单列表</div>
 
 
 							</div>
@@ -329,16 +328,16 @@
 								</div>
 								<div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
 									<div class="am-form-group tpl-table-list-select">
-										人数：<input type="text">
 									</div>
 								</div>
 								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-									<div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态"> 
-										<span class="am-input-group-btn">
-											<button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-												type="button">
-											</button>
+									<div
+										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
+										<input type="text" class="am-form-field " value="状态"> <span
+											class="am-input-group-btn">
+											<button
+												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
+												type="button"></button>
 										</span>
 									</div>
 								</div>
@@ -349,32 +348,100 @@
 										id="example-r">
 										<thead>
 											<tr>
-												<th>桌号</th>
-												<th>桌名</th>
-												<th>可使用的人数</th>
-												<th>是否使用</th>
+												<th>ID</th>
+												<th>时间</th>
+												<th>餐桌</th>
+												<th>金额</th>
+												<th>是否付款</th>
 												<th>操作</th>
 											</tr>
 										</thead>
 										<tbody>
-											<c:forEach var="desk" items="${deskList}">
-												<tr class="gradeX" >
-												<td>${desk.did}</td>
-												<td>${desk.dname}</td>
-												<td>${desk.dcount}</td>
-												<td>${desk.dstate}</td>
+											<tr class="gradeX">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
+															查看详情
+														</a> 
 													</div>
 												</td>
 											</tr>
-											</c:forEach>
+											<tr class="even gradeC">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
+												<td>
+													<div class="tpl-table-black-operation">
+														<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															查看详情
+														</a> 
+													</div>
+												</td>
+											</tr>
+											<tr class="gradeX">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
+												<td>
+													<div class="tpl-table-black-operation">
+														<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															查看详情
+														</a> 
+													</div>
+												</td>
+											</tr>
+											<tr class="even gradeC">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
+												<td>
+													<div class="tpl-table-black-operation">
+														<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															查看详情
+														</a> 
+													</div>
+												</td>
+											</tr>
+											<tr class="even gradeC">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
+												<td>
+													<div class="tpl-table-black-operation">
+														<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															查看详情
+														</a> 
+													</div>
+												</td>
+											</tr>
+
+											<tr class="even gradeC">
+												<td>1</td>
+												<td>2018-9-29</td>
+												<td>1</td>
+												<td>100</td>
+												<td>未付款</td>
+												<td>
+													<div class="tpl-table-black-operation">
+														<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															查看详情
+														</a> 
+													</div>
+												</td>
+											</tr>
 											<!-- more data -->
 										</tbody>
 									</table>
