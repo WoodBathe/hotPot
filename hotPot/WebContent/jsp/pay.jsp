@@ -401,7 +401,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>
@@ -418,7 +418,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>
@@ -435,7 +435,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>
@@ -452,7 +452,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>
@@ -469,7 +469,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>
@@ -487,7 +487,7 @@
                                                             <i class="am-icon-pencil"></i> 结算
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 查看详情
+                                                            <i class="am-icon-paint-brush"></i> 查看详情
                                                         </a>
                                                     </div>
                                                 </td>

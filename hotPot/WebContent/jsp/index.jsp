@@ -197,9 +197,8 @@
 					href="<%=basePath%>jsp/index.jsp" class="active"> <i
 						class="am-icon-home sidebar-nav-link-logo"></i> 首页
 				</a></li>
-				<li class="sidebar-nav-link"><a
-					href="<%=basePath%>jsp/pay.jsp"> <i
-						class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
+				<li class="sidebar-nav-link"><a href="<%=basePath%>jsp/pay.jsp">
+						<i class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
 				</a></li>
 				<li class="sidebar-nav-link"><a
 					href="<%=basePath%>jsp/frontService.jsp"> <i
@@ -308,10 +307,10 @@
 						<div class="page-header-heading">
 							<span class="am-icon-home page-header-heading-icon"></span> 首页 <small>好辣火锅</small>
 						</div>
-						<p class="page-header-description">好辣火锅，汤底味美，醇厚，配菜种类多样，菜品新鲜可口！</p>
+						<p class="page-header-description" id="title">好辣火锅，汤底味美，醇厚，配菜种类多样，菜品新鲜可口！</p>
 					</div>
 					<div class="am-u-lg-3 tpl-index-settings-button">
-						<button type="button" class="page-header-button">
+						<button type="button" class="page-header-button" id="set">
 							<span class="am-icon-paint-brush"></span> 设置
 						</button>
 					</div>
@@ -420,23 +419,22 @@
 							<div class="widget-body widget-body-md am-fr">
 
 								<div class="am-progress-title">
-									羊肉卷 <span class="am-fr am-progress-title-more">28%
-										/ 100%</span>
+									羊肉卷 <span class="am-fr am-progress-title-more">28% /
+										100%</span>
 								</div>
 								<div class="am-progress">
 									<div class="am-progress-bar" style="width: 15%"></div>
 								</div>
 								<div class="am-progress-title">
-									肥牛卷 <span class="am-fr am-progress-title-more">28%
-										/ 100%</span>
+									肥牛卷 <span class="am-fr am-progress-title-more">28% /
+										100%</span>
 								</div>
 								<div class="am-progress">
 									<div class="am-progress-bar  am-progress-bar-warning"
 										style="width: 75%"></div>
 								</div>
 								<div class="am-progress-title">
-									生菜 <span class="am-fr am-progress-title-more">28%
-										/ 100%</span>
+									生菜 <span class="am-fr am-progress-title-more">28% / 100%</span>
 								</div>
 								<div class="am-progress">
 									<div class="am-progress-bar am-progress-bar-danger"
@@ -445,8 +443,8 @@
 							</div>
 						</div>
 					</div>
-					
-					
+
+
 					<div
 						class="am-u-sm-12 am-u-md-12 am-u-lg-8 widget-margin-bottom-lg">
 
@@ -555,10 +553,55 @@
 			</div>
 		</div>
 	</div>
+	<!-- 弹出层 -->
+	<div class="am-modal am-modal-no-btn" id="calendar-edit-box">
+		<div class="am-modal-dialog tpl-model-dialog">
+			<div class="am-modal-hd">
+				<a href="javascript: void(0)"
+					class="am-close edit-box-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<div class="am-modal-bd tpl-am-model-bd am-cf">
+
+				<form class="am-form tpl-form-border-form">
+					<div class="am-form-group am-u-sm-12">
+						<label for="user-name"
+							class="am-u-sm-12 am-form-label am-text-left">个性宣传语</label>
+						<div class="am-u-sm-12">
+							<input type="text"
+								class="tpl-form-input am-margin-top-xs calendar-edit-box-title"
+								id="user-name">
+						</div>
+						<div class="am-form-group">
+							<div class="am-u-sm-12 am-u-sm-push-12" style="margin-top: 10px;">
+								<button type="button"
+									class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+
 	<script src="<%=basePath%>assets/js/amazeui.min.js"></script>
 	<script src="<%=basePath%>assets/js/amazeui.datatables.min.js"></script>
 	<script src="<%=basePath%>assets/js/dataTables.responsive.min.js"></script>
 	<script src="<%=basePath%>assets/js/app.js"></script>
+
+	<script>
+		$(function() {
+			var editBox = $('#calendar-edit-box');
+			//var title = $("#title");
+			$("#set").click(function() {
+				//$('.calendar-edit-box-title').val(title)
+				//  弹出框
+				editBox.modal();
+			});
+
+		});
+	</script>
 
 </body>
 
