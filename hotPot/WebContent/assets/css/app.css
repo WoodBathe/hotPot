@@ -609,8 +609,11 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   font-size: 24px;
 }
 .tpl-login-content {
-  width: 300px;
-  margin: 12% auto 0;
+  width: 500px;
+  padding: 40px 40px 25px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 5% auto 0;
 }
 .tpl-login-remember-me {
   color: #B3B3B3;
@@ -1377,7 +1380,7 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
 }
 .theme-black .tpl-login-btn {
   border: 1px solid #b5b5b5;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(51, 51, 51);
   padding: 10px 16px;
   font-size: 14px;
   line-height: 14px;
@@ -1556,13 +1559,13 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   background: 0 0;
   border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #c2cad8;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  color: #fff;
+  color: #555;
   box-shadow: none;
   padding-left: 0;
   padding-right: 0;
