@@ -29,6 +29,7 @@ public class StaffController {
 			session.setAttribute("staff", staff2);
 			session.setMaxInactiveInterval(-1);
 		}else {
+			
 			mv.setViewName("redirect:/jsp/login.jsp");
 		}
 		return mv;

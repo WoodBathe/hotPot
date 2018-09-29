@@ -202,7 +202,7 @@
 						class="am-icon-table sidebar-nav-link-logo"></i> 买单结算
 				</a></li>
 				<li class="sidebar-nav-link"><a
-					href="<%=basePath%>jsp/frontService.jsp"> <i
+					href="<%=basePath%>desk/deskList.do"> <i
 						class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
 				</a></li>
 
@@ -213,7 +213,7 @@
 				</a>
 					<ul class="sidebar-nav sidebar-nav-sub">
 						<li class="sidebar-nav-link"><a
-							href="<%=basePath%>jsp/table-list-img.jsp"> <span
+							href="<%=basePath%>recipe/recipeList.do"> <span
 								class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
 						</a></li>
 

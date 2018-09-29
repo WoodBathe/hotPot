@@ -5,6 +5,7 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -344,13 +345,12 @@
 									</div>
 								</div>
 								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-									<div
-										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态"> <span
-											class="am-input-group-btn">
-											<button
-												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-												type="button"></button>
+									<div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
+										<input type="text" class="am-form-field " value="状态"> 
+										<span class="am-input-group-btn">
+											<button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
+												type="button">
+											</button>
 										</span>
 									</div>
 								</div>
@@ -369,11 +369,12 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
+											<c:forEach var="desk" items="${deskList}">
+												<tr class="gradeX" >
+												<td>${desk.did}</td>
+												<td>${desk.dname}</td>
+												<td>${desk.dcount}</td>
+												<td>${desk.dstate}</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
@@ -385,87 +386,7 @@
 													</div>
 												</td>
 											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
+											</c:forEach>
 											<!-- more data -->
 										</tbody>
 									</table>
