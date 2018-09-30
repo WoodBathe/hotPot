@@ -28,7 +28,20 @@
 	href="<%=basePath%>assets/css/amazeui.datatables.min.css" />
 <link rel="stylesheet" href="<%=basePath%>assets/css/app.css">
 <script src="<%=basePath%>assets/js/jquery.min.js"></script>
-
+<script type="text/javascript" >
+$(function() {
+	//点击courseimg文本框触发上传按钮
+	$("#rimage").click(function() {
+		$("#doc-form-file").trigger("click");
+	});
+	$("#doc-form-file").change(function(){
+		//获取FileUpload对象
+		var x = document.getElementById("doc-form-file").files;
+		$("#rimage").val(x[0].name);
+	})
+	
+});
+</script> 
 </head>
 
 <body data-type="widgets">
@@ -316,14 +329,15 @@
 							</div>
 							<div class="widget-body am-fr">
 
-								<form class="am-form tpl-form-line-form">
+								<form class="am-form tpl-form-line-form" 
+								action="<%=basePath%>recipe/addRecipe.do" method="post" enctype="multipart/form-data">
 									<div class="am-form-group">
 										<label for="user-name" class="am-u-sm-3 am-form-label">菜品名称
 											<span class="tpl-form-line-small-title">Name</span>
 										</label>
 										<div class="am-u-sm-9">
 											<input type="text" class="tpl-form-input" id="user-name"
-												placeholder="请输入菜品名称">
+												name="rname" placeholder="请输入菜品名称">
 										</div>
 									</div>
 
@@ -340,7 +354,8 @@
 												<button type="button" class="am-btn am-btn-danger am-btn-sm">
 													<i class="am-icon-cloud-upload"></i> 添加封面图片
 												</button>
-												<input id="doc-form-file" type="file" multiple="">
+												<input id="doc-form-file" type="file" name="file" multiple="">
+												<input type="hidden" id="rimage" name="rimage" style="width: 100%;height: 100%" >
 											</div>
 
 										</div>
@@ -352,7 +367,7 @@
 										</label>
 										<div class="am-u-sm-9">
 											<input type="text" class="tpl-form-input" id="user-name"
-												placeholder="请输入进价，例如：10.0">
+												name="rbid" laceholder="请输入进价，例如：10.0">
 										</div>
 									</div>
 									
@@ -362,7 +377,7 @@
 										</label>
 										<div class="am-u-sm-9">
 											<input type="text" class="tpl-form-input" id="user-name"
-												placeholder="请输入售价，例如：10.0">
+												name="rprice" placeholder="请输入售价，例如：10.0">
 										</div>
 									</div>
 									
@@ -372,7 +387,7 @@
 										</label>
 										<div class="am-u-sm-9">
 											<input type="text" class="tpl-form-input" id="user-name"
-												placeholder="请输入菜品类别">
+												name="rsort" placeholder="请输入菜品类别">
 										</div>
 									</div>
 									
@@ -382,7 +397,7 @@
 										</label>
 										<div class="am-u-sm-9">
 											<input type="text" class="tpl-form-input" id="user-name"
-												placeholder="请输入库存">
+												name="rstock" placeholder="请输入库存">
 										</div>
 									</div>
 									
@@ -391,14 +406,14 @@
 											<span class="tpl-form-line-small-title">Hot</span>
 										</label>
 										<div class="am-u-sm-9">
-											<input type="radio" value="热门" name="hot">热门
-											<input type="radio" value="普通" name="hot">普通
+											<input type="radio" value="热门" name="rstate">热门
+											<input type="radio" value="普通" name="rstate">普通
 										</div>
 									</div>
 
 									<div class="am-form-group">
 										<div class="am-u-sm-9 am-u-sm-push-3">
-											<button type="button"
+											<button type="submit"
 												class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
 										</div>
 									</div>

@@ -333,13 +333,6 @@
 									</div>
 								</div>
 								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-									<div
-										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态">
-										<span class="am-input-group-btn">
-											<button
-												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-												type="button"></button>
 									<div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
 										<input type="text" class="am-form-field " value="状态"> 
 										<span class="am-input-group-btn">
@@ -348,8 +341,8 @@
 											</button>
 										</span>
 									</div>
+								
 								</div>
-
 								<div class="am-u-sm-12">
 									<table width="100%"
 										class="am-table am-table-compact am-table-striped tpl-table-black "
@@ -375,100 +368,18 @@
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
 															查看订单
 														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del" id="calendar">
+															class="tpl-table-black-operation-del" id="${desk.did}">
 															<i class="am-icon-paint-brush"></i> 使用
 														</a>
 													</div>
 												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-paint-brush"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-paint-brush"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-paint-brush"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-paint-brush"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
-
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>一号桌</td>
-												<td>4</td>
-												<td>已使用</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															查看订单
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-paint-brush"></i> 使用
-														</a>
-													</div>
-												</td>
-											</tr>
+											</tr>							
 											</c:forEach>
 											<!-- more data -->
 										</tbody>
 									</table>
 								</div>
 								<div class="am-u-lg-12 am-cf">
-
 									<div class="am-fr">
 										<ul class="am-pagination tpl-pagination">
 											<li class="am-disabled"><a href="#">«</a></li>
@@ -481,7 +392,7 @@
 										</ul>
 									</div>
 								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -539,145 +450,6 @@
 										</div>
 									</td>
 								</tr>
-								<tr class="even gradeC">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">生菜</td>
-									<td class="am-text-middle">蔬菜</td>
-									<td class="am-text-middle">13</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="gradeX">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">牛肉丸</td>
-									<td class="am-text-middle">丸子</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">34</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="even gradeC">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">牛肉丸</td>
-									<td class="am-text-middle">丸子</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">34</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="even gradeC">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">牛肉丸</td>
-									<td class="am-text-middle">丸子</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">34</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
-
-								<tr class="even gradeC">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">牛肉丸</td>
-									<td class="am-text-middle">丸子</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">34</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="even gradeC">
-									<td><img src="<%=basePath%>assets/img/k.jpg"
-										class="tpl-table-line-img" alt=""></td>
-									<td class="am-text-middle">牛肉丸</td>
-									<td class="am-text-middle">丸子</td>
-									<td class="am-text-middle">23</td>
-									<td class="am-text-middle">34</td>
-									<td class="am-text-middle">100</td>
-									<td class="am-text-middle">热门</td>
-									<td class="am-text-middle">
-										<div>
-											<div style="float: left; font-size: 20px;">
-												<a href="#" id="minus">-</a>
-											</div>
-											<div style="float: left; width: 20px; margin-left: 15px;">
-												<input type="text" value="1" id="num">
-											</div>
-											<div style="float: left;  font-size: 20px; margin-left: 15px;">
-												<a href="#" id="add">+</a>
-											</div>
-										</div>
-									</td>
-								</tr>
 								<!-- more data -->
 							</tbody>
 						</table>
@@ -701,15 +473,22 @@
 	<script src="<%=basePath%>assets/js/app.js"></script>
 
 	<script>
-		$(function() {
+		/* $(function() {
 			var editBox = $('#calendar-edit-box');
 			$("#calendar").click(function() {
 				//  弹出框
 				editBox.modal();
 			});
 
-		});
+		}); */
+		$(function() {
+			var editBox = $('#calendar-edit-box');
+			$(".tpl-table-black-operation-del").click(function() {
+				//  弹出框
+				editBox.modal();
+			});
 
+		});
 	</script>
 
 </body>
