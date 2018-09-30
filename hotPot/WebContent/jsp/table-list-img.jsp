@@ -5,6 +5,7 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() 
 	                   + ":" + request.getServerPort() + path + "/";
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -356,22 +357,22 @@
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-              <option value="option2">荤菜</option>
-              <option value="option3">蔬菜</option>
-              <option value="option3">水果</option>
-              <option value="option3">丸子</option>
-              <option value="option3">熟菜</option>
-              <option value="option3">蘸酱</option>
-            </select>
+							              <option value="option1">所有类别</option>
+							              <option value="option2">荤菜</option>
+							              <option value="option3">蔬菜</option>
+							              <option value="option3">水果</option>
+							              <option value="option3">丸子</option>
+							              <option value="option3">熟菜</option>
+							              <option value="option3">蘸酱</option>
+							            </select>
                                     </div>
                                 </div>
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
                                     <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
                                         <input type="text" class="am-form-field ">
                                         <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
-          </span>
+								            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
+								        </span>
                                     </div>
                                 </div>
 
@@ -389,7 +390,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="gradeX">
+                                            <%-- <tr class="gradeX">
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
@@ -409,38 +410,18 @@
                                                         </a>
                                                     </div>
                                                 </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">生菜</td>
-                                                <td class="am-text-middle">蔬菜</td>
-                                                <td class="am-text-middle">13</td>
-                                                <td class="am-text-middle">23</td>
-                                                <td class="am-text-middle">100</td>
-                                                <td class="am-text-middle">热门</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            </tr> --%>
+                                            <c:forEach var="recipe" items="${recipeList}">
                                             <tr class="gradeX">
                                                 <td>
                                                     <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
-                                                <td class="am-text-middle">牛肉丸</td>
-                                                <td class="am-text-middle">丸子</td>
-                                                <td class="am-text-middle">23</td>
-                                                <td class="am-text-middle">34</td>
-                                                <td class="am-text-middle">100</td>
-                                                <td class="am-text-middle">热门</td>
+                                                <td class="am-text-middle">${recipe.rname}</td>
+                                                <td class="am-text-middle">${recipe.rsort}</td>
+                                                <td class="am-text-middle">${recipe.rbid}</td>
+                                                <td class="am-text-middle">${recipe.rprice}</td>
+                                                <td class="am-text-middle">${recipe.rstock}</td>
+                                                <td class="am-text-middle">${recipe.rstate}</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -452,70 +433,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">牛肉丸</td>
-                                                <td class="am-text-middle">丸子</td>
-                                                <td class="am-text-middle">23</td>
-                                                <td class="am-text-middle">34</td>
-                                                <td class="am-text-middle">100</td>
-                                                <td class="am-text-middle">热门</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">牛肉丸</td>
-                                                <td class="am-text-middle">丸子</td>
-                                                <td class="am-text-middle">23</td>
-                                                <td class="am-text-middle">34</td>
-                                                <td class="am-text-middle">100</td>
-                                                <td class="am-text-middle">热门</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="<%=basePath%>assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">牛肉丸</td>
-                                                <td class="am-text-middle">丸子</td>
-                                                <td class="am-text-middle">23</td>
-                                                <td class="am-text-middle">34</td>
-                                                <td class="am-text-middle">100</td>
-                                                <td class="am-text-middle">热门</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            </c:forEach>
                                             <!-- more data -->
                                         </tbody>
                                     </table>
