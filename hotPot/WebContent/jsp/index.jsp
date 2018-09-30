@@ -229,7 +229,7 @@
 				</a>
 					<ul class="sidebar-nav sidebar-nav-sub">
 						<li class="sidebar-nav-link"><a
-							href="<%=basePath%>jsp/members.jsp"> <span
+							href="<%=basePath%>customer/customerList.do"> <span
 								class="am-icon-angle-right sidebar-nav-link-logo"></span> 会员列表
 						</a></li>
 

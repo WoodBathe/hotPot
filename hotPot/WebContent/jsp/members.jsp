@@ -5,6 +5,7 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,16 +348,16 @@
 											<tr>
 												<th>ID</th>
 												<th>名字</th>
-												<th>生日</th>
 												<th>性别</th>
 												<th>电话</th>
-												<th>加入时间</th>
+												<th>生日</th>
+												<th>办卡时间</th>
 												<th>积分</th>
 												<th>操作</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr class="gradeX">
+											<!-- <tr class="gradeX">
 												<td>1</td>
 												<td>张三</td>
 												<td>1956-03-09</td>
@@ -374,15 +375,16 @@
 														</a>
 													</div>
 												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>张三</td>
-												<td>1956-03-09</td>
-												<td>男</td>
-												<td>张三13288888888</td>
-												<td>2018-09-29</td>
-												<td>100</td>
+											</tr> -->
+											<c:forEach var="customer" items="${customerList}">
+												<tr class="gradeX">
+												<td>${customer.cid}</td>
+												<td>${customer.cname}</td>
+												<td>${customer.csex}</td>
+												<td>${customer.cphone}</td>
+												<td>${customer.cbirthday}</td>
+												<td>${customer.cjoin}</td>
+												<td>${customer.cintegral}</td>
 												<td>
 													<div class="tpl-table-black-operation">
 														<a href="javascript:;"> <i class="am-icon-pencil"></i>
@@ -394,83 +396,7 @@
 													</div>
 												</td>
 											</tr>
-											<tr class="gradeX">
-												<td>1</td>
-												<td>张三</td>
-												<td>1956-03-09</td>
-												<td>男</td>
-												<td>张三13288888888</td>
-												<td>2018-09-29</td>
-												<td>100</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															编辑
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 删除
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>张三</td>
-												<td>1956-03-09</td>
-												<td>男</td>
-												<td>张三13288888888</td>
-												<td>2018-09-29</td>
-												<td>100</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															编辑
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 删除
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>张三</td>
-												<td>1956-03-09</td>
-												<td>男</td>
-												<td>张三13288888888</td>
-												<td>2018-09-29</td>
-												<td>100</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															编辑
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 删除
-														</a>
-													</div>
-												</td>
-											</tr>
-
-											<tr class="even gradeC">
-												<td>1</td>
-												<td>张三</td>
-												<td>1956-03-09</td>
-												<td>男</td>
-												<td>张三13288888888</td>
-												<td>2018-09-29</td>
-												<td>100</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															编辑
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 删除
-														</a>
-													</div>
-												</td>
-											</tr>
+											</c:forEach>
 											<!-- more data -->
 										</tbody>
 									</table>
