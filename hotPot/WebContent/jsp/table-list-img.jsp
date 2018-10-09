@@ -219,7 +219,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/frontService.jsp">
+                    <a href="<%=basePath%>desk/deskList.do">
                         <i class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
                     </a>
                 </li>
@@ -231,7 +231,7 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>recipe/recipeList.do">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
                             </a>
                         </li>
@@ -275,12 +275,12 @@
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/day.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 日结算
                             </a>
                         </li>
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/sum.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 总结算
                             </a>
                         </li>
@@ -293,13 +293,13 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/order.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 在线订货
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/GRN.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 导入入库单
                             </a>
                         </li>
@@ -312,18 +312,18 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/employees.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 员工列表
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/addEmployees.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 添加员工
                             </a>
                         </li>
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/payroll.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 发放薪资
                             </a>
                         </li>
@@ -424,7 +424,7 @@
                                                 <td class="am-text-middle">${recipe.rstate}</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
+                                                        <a href="javascript:;" id="modify">
                                                             <i class="am-icon-pencil"></i> 编辑
                                                         </a>
                                                         <a href="javascript:;" class="tpl-table-black-operation-del">
@@ -459,8 +459,117 @@
             </div>
         </div>
     </div>
+    
+    <!-- 弹出层 -->
+
+		<div class="am-modal am-modal-no-btn" id="calendar-edit-box"
+			style="width: 100%; margin: auto;">
+			<div class="am-modal-dialog tpl-model-dialog" style="width: 55%;">
+				<div class="am-modal-hd">
+					<a href="javascript: void(0)"
+						class="am-close edit-box-close am-close-spin" data-am-modal-close>&times;</a>
+				</div>
+				<div class="widget-body am-fr">
+
+								<form class="am-form tpl-form-line-form">
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">菜品名称
+											<span class="tpl-form-line-small-title">Name</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name">
+										</div>
+									</div>
+
+
+									<div class="am-form-group">
+										<label for="user-weibo" class="am-u-sm-3 am-form-label">菜品缩略图
+											<span class="tpl-form-line-small-title">Images</span>
+										</label>
+										<div class="am-u-sm-9">
+											<div class="am-form-group am-form-file">
+												<div class="tpl-form-file-img">
+													<img src="<%=basePath %>assets/img/image.jpg" alt="" style="width: 250px;height: 200px;">
+												</div>
+												<button type="button" class="am-btn am-btn-danger am-btn-sm">
+													<i class="am-icon-cloud-upload"></i> 添加封面图片
+												</button>
+												<input id="doc-form-file" type="file" multiple="">
+											</div>
+
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">进价
+											<span class="tpl-form-line-small-title">Purchase</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name">
+										</div>
+									</div>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">售价
+											<span class="tpl-form-line-small-title">Price</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name">
+										</div>
+									</div>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">类别
+											<span class="tpl-form-line-small-title">Type</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name">
+										</div>
+									</div>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">库存
+											<span class="tpl-form-line-small-title">Inventory</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name">
+										</div>
+									</div>
+									
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">热门
+											<span class="tpl-form-line-small-title">Hot</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="radio" value="热门" name="hot">热门
+											<input type="radio" value="普通" name="hot">普通
+										</div>
+									</div>
+
+									<div class="am-form-group">
+										<div class="am-u-sm-9 am-u-sm-push-3">
+											<button type="button"
+												class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+										</div>
+									</div>
+								</form>
+							</div>
+			</div>
+		</div>
+    
     <script src="<%=basePath%>assets/js/amazeui.min.js"></script>
     <script src="<%=basePath%>assets/js/app.js"></script>
+    
+    <script type="text/javascript">
+    $(function() {
+		var editBox = $('#calendar-edit-box');
+		$("#modify").click(function() {
+			//  弹出框
+			editBox.modal();
+		});
+
+	});
+    </script>
 
 </body>
 

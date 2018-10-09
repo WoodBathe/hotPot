@@ -219,7 +219,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="<%=basePath%>jsp/frontService.jsp">
+                    <a href="<%=basePath%>desk/deskList.do">
                         <i class="am-icon-calendar sidebar-nav-link-logo"></i> 前台服务
                     </a>
                 </li>
@@ -231,7 +231,7 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>recipe/recipeList.do">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜品列表
                             </a>
                         </li>
@@ -275,12 +275,12 @@
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/day.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 日结算
                             </a>
                         </li>
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/sum.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 总结算
                             </a>
                         </li>
@@ -293,13 +293,13 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/order.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 在线订货
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/GRN.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 导入入库单
                             </a>
                         </li>
@@ -312,18 +312,18 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list.jsp">
+                            <a href="<%=basePath%>jsp/employees.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 员工列表
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/addEmployees.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 添加员工
                             </a>
                         </li>
                         <li class="sidebar-nav-link">
-                            <a href="<%=basePath%>jsp/table-list-img.jsp">
+                            <a href="<%=basePath%>jsp/payroll.jsp">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 发放薪资
                             </a>
                         </li>

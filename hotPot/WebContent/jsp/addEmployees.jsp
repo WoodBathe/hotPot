@@ -5,14 +5,13 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>前台服务</title>
+<title>添加员工</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -185,7 +184,7 @@
 					</div>
 					<span class="user-panel-logged-in-text"> <i
 						class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-						禁言小张
+						小张
 					</span> <a href="javascript:;" class="tpl-user-panel-action-link"> <span
 						class="am-icon-pencil"></span> 账号设置
 					</a>
@@ -300,198 +299,90 @@
 
 		<!-- 内容区域 -->
 		<div class="tpl-content-wrapper">
+
 			<div class="row-content am-cf">
+
+
 				<div class="row">
+
 					<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
 						<div class="widget am-cf">
 							<div class="widget-head am-cf">
-								<div class="widget-title  am-cf">前台服务</div>
-
-
+								<div class="widget-title am-fl">添加员工</div>
+								<div class="widget-function am-fr">
+									<a href="javascript:;" class="am-icon-cog"></a>
+								</div>
 							</div>
-							<div class="widget-body  am-fr">
+							<div class="widget-body am-fr">
 
-								<div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+								<form class="am-form tpl-form-line-form">
 									<div class="am-form-group">
-										<div class="am-btn-toolbar">
-											<div class="am-btn-group am-btn-group-xs">
-												<button type="button"
-													class="am-btn am-btn-default am-btn-success">
-													<span class="am-icon-plus"></span> 新增
-												</button>
-												<button type="button"
-													class="am-btn am-btn-default am-btn-danger">
-													<span class="am-icon-trash-o"></span> 删除
-												</button>
-											</div>
+										<label for="user-name" class="am-u-sm-3 am-form-label">员工姓名
+											<span class="tpl-form-line-small-title">Name</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入员工姓名">
 										</div>
 									</div>
-								</div>
-								<div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-									<div class="am-form-group tpl-table-list-select">
-										人数：<input type="text">
-									</div>
-								</div>
-								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
-									<div
-										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="状态">
-										<span class="am-input-group-btn">
-											<button
-												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
-												type="button"></button>
-										</span>
+
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">员工性别
+											<span class="tpl-form-line-small-title">Sex</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="radio" value="热门" name="sex">男 <input
+												type="radio" value="普通" name="sex">女
+										</div>
 									</div>
 
-								</div>
-								<div class="am-u-sm-12">
-									<table width="100%"
-										class="am-table am-table-compact am-table-striped tpl-table-black "
-										id="example-r">
-										<thead>
-											<tr>
-												<th>桌号</th>
-												<th>桌名</th>
-												<th>可使用的人数</th>
-												<th>是否使用</th>
-												<th>操作</th>
-											</tr>
-										</thead>
-										<tbody>
-											<c:forEach var="desk" items="${deskList}">
-												<tr class="gradeX">
-													<td>${desk.did}</td>
-													<td>${desk.dname}</td>
-													<td>${desk.dcount}</td>
-													<td>${desk.dstate}</td>
-													<td>
-														<div class="tpl-table-black-operation">
-															<a href="javascript:;"> <i class="am-icon-pencil"></i>
-																查看订单
-															</a> <a href="javascript:;"
-																class="tpl-table-black-operation-del" id="${desk.did}">
-																<i class="am-icon-paint-brush"></i> 使用
-															</a>
-														</div>
-													</td>
-												</tr>
-											</c:forEach>
-											<!-- more data -->
-										</tbody>
-									</table>
-								</div>
-								<div class="am-u-lg-12 am-cf">
-									<div class="am-fr">
-										<ul class="am-pagination tpl-pagination">
-											<li class="am-disabled"><a href="#">«</a></li>
-											<li class="am-active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li><a href="#">»</a></li>
-										</ul>
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">电话
+											<span class="tpl-form-line-small-title">iPhone</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="请输入电话号码">
+										</div>
 									</div>
-								</div>
 
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">职位
+											<span class="tpl-form-line-small-title">Position</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="CEO">
+										</div>
+									</div>
+									<div class="am-form-group">
+										<label for="user-name" class="am-u-sm-3 am-form-label">密码
+											<span class="tpl-form-line-small-title">Password</span>
+										</label>
+										<div class="am-u-sm-9">
+											<input type="text" class="tpl-form-input" id="user-name"
+												placeholder="dssvsw343">
+										</div>
+									</div>
+									<hr style="border: double;margin-top: 30px;">
+									<div class="am-form-group">
+											<button type="button" style="float: right;margin-right: 10px;"
+												class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
+	</div>
+	<script src="<%=basePath%>assets/js/amazeui.min.js"></script>
+	<script src="<%=basePath%>assets/js/amazeui.datatables.min.js"></script>
+	<script src="<%=basePath%>assets/js/dataTables.responsive.min.js"></script>
+	<script src="<%=basePath%>assets/js/app.js"></script>
 
-		<!-- 弹出层 -->
-
-		<div class="am-modal am-modal-no-btn" id="calendar-edit-box"
-			style="width: 100%; margin: auto;">
-			<div class="am-modal-dialog tpl-model-dialog" style="width: 55%;">
-				<div class="am-modal-hd">
-					<a href="javascript: void(0)"
-						class="am-close edit-box-close am-close-spin" data-am-modal-close>&times;</a>
-				</div>
-				<div class="am-modal-bd tpl-am-model-bd am-cf">
-
-					<form class="am-form tpl-form-border-form">
-						<div class="am-u-sm-12">
-							<table width="100%"
-								class="am-table am-table-compact am-table-striped tpl-table-black ">
-								<thead>
-									<tr>
-										<th>图片</th>
-										<th>名称</th>
-										<th>类别</th>
-										<th>进价</th>
-										<th>售价</th>
-										<th>库存</th>
-										<th>是否热门</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="gradeX">
-										<td><img src="<%=basePath%>assets/img/k.jpg"
-											class="tpl-table-line-img" alt=""></td>
-										<td class="am-text-middle">羊肉卷</td>
-										<td class="am-text-middle">荤菜</td>
-										<td class="am-text-middle">15</td>
-										<td class="am-text-middle">34</td>
-										<td class="am-text-middle">100</td>
-										<td class="am-text-middle">热门</td>
-										<td class="am-text-middle">
-											<div>
-												<div style="float: left; font-size: 20px;">
-													<a href="#">-</a>
-												</div>
-												<div style="float: left; width: 20px; margin-left: 15px;">
-													<input type="text" value="1" id="num">
-												</div>
-												<div
-													style="float: left; font-size: 20px; margin-left: 15px;">
-													<a href="#">+</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<!-- more data -->
-								</tbody>
-							</table>
-						</div>
-						<div class="am-form-group">
-							<div class="am-u-sm-12 am-u-sm-push-12" style="margin-top: 10px;">
-								<button type="button"
-									class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
-							</div>
-						</div>
-
-					</form>
-
-				</div>
-			</div>
-		</div>
-
-		<script src="<%=basePath%>assets/js/amazeui.min.js"></script>
-		<script src="<%=basePath%>assets/js/amazeui.datatables.min.js"></script>
-		<script src="<%=basePath%>assets/js/dataTables.responsive.min.js"></script>
-		<script src="<%=basePath%>assets/js/app.js"></script>
-
-		<script>
-			/* $(function() {
-				var editBox = $('#calendar-edit-box');
-				$("#calendar").click(function() {
-					//  弹出框
-					editBox.modal();
-				});
-
-			}); */
-			$(function() {
-				var editBox = $('#calendar-edit-box');
-				$(".tpl-table-black-operation-del").click(function() {
-					//  弹出框
-					editBox.modal();
-				});
-
-			});
-		</script>
 </body>
 
 </html>
