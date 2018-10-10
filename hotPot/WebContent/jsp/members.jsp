@@ -229,7 +229,7 @@
 				</a>
 					<ul class="sidebar-nav sidebar-nav-sub">
 						<li class="sidebar-nav-link"><a
-							href="<%=basePath%>jsp/members.jsp"> <span
+							href="<%=basePath%>customer/customerList.do"> <span
 								class="am-icon-angle-right sidebar-nav-link-logo"></span> 会员列表
 						</a></li>
 
@@ -331,8 +331,8 @@
 								<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
 									<div
 										class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-										<input type="text" class="am-form-field " value="性别"> <span
-											class="am-input-group-btn">
+										<input type="text" class="am-form-field " value="性别">
+										<span class="am-input-group-btn">
 											<button
 												class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
 												type="button"></button>
@@ -378,24 +378,25 @@
 											</tr> -->
 											<c:forEach var="customer" items="${customerList}">
 												<tr class="gradeX">
-												<td>${customer.cid}</td>
-												<td>${customer.cname}</td>
-												<td>${customer.csex}</td>
-												<td>${customer.cphone}</td>
-												<td>${customer.cbirthday}</td>
-												<td>${customer.cjoin}</td>
-												<td>${customer.cintegral}</td>
-												<td>
-													<div class="tpl-table-black-operation">
-														<a href="javascript:;"> <i class="am-icon-pencil"></i>
-															编辑
-														</a> <a href="javascript:;"
-															class="tpl-table-black-operation-del"> <i
-															class="am-icon-trash"></i> 删除
-														</a>
-													</div>
-												</td>
-											</tr>
+													<td>${customer.cid}</td>
+													<td>${customer.cname}</td>
+													<td>${customer.csex}</td>
+													<td>${customer.cphone}</td>
+													<td>${customer.cbirthday}</td>
+													<td>${customer.cjoin}</td>
+													<td>${customer.cintegral}</td>
+													<td>
+														<div class="tpl-table-black-operation">
+															<a href="javascript:;"
+																class="tpl-table-black-operation-modify"> <i
+																class="am-icon-pencil"></i> 编辑
+															</a> <a href="javascript:;"
+																class="tpl-table-black-operation-del"> <i
+																class="am-icon-trash"></i> 删除
+															</a>
+														</div>
+													</td>
+												</tr>
 											</c:forEach>
 											<!-- more data -->
 										</tbody>
@@ -422,10 +423,94 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- 弹出层 -->
+
+	<div class="am-modal am-modal-no-btn" id="modifyMembers"
+		style="width: 100%; margin: auto;">
+		<div class="am-modal-dialog tpl-model-dialog" style="width: 55%;">
+			<div class="am-modal-hd">
+				<a href="javascript: void(0)"
+					class="am-close edit-box-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<div class="widget-body am-fr">
+
+				<form class="am-form tpl-form-line-form">
+								<div class="am-form-group">
+									<label for="user-name" class="am-u-sm-3 am-form-label">会员姓名
+										<span class="tpl-form-line-small-title">Name</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input type="text" class="tpl-form-input" id="user-name"
+											placeholder="请输入会员姓名">
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<label for="user-name" class="am-u-sm-3 am-form-label">会员性别
+										<span class="tpl-form-line-small-title">Sex</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input type="radio" value="热门" name="sex" style="margin-left: -420px;">男 <input
+											type="radio" value="普通" name="sex" style="margin-left: 30px;">女
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<label for="user-name" class="am-u-sm-3 am-form-label">电话
+										<span class="tpl-form-line-small-title">iPhone</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input type="text" class="tpl-form-input" id="user-name"
+											placeholder="请输入电话号码">
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<label for="user-name" class="am-u-sm-3 am-form-label">积分
+										<span class="tpl-form-line-small-title">Integral</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input type="text" class="tpl-form-input" id="user-name"
+											placeholder="请输入积分额度">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-name" class="am-u-sm-3 am-form-label">生日
+										<span class="tpl-form-line-small-title">Birthday</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input type="text" class="tpl-form-input" id="user-name"
+											placeholder="请输入生日日期">
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<div class="am-u-sm-9 am-u-sm-push-3" style="float: right;">
+										<button type="button"
+											class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+									</div>
+								</div>
+							</form>
+			</div>
+		</div>
+	</div>
+
 	<script src="<%=basePath%>assets/js/amazeui.min.js"></script>
 	<script src="<%=basePath%>assets/js/amazeui.datatables.min.js"></script>
 	<script src="<%=basePath%>assets/js/dataTables.responsive.min.js"></script>
 	<script src="<%=basePath%>assets/js/app.js"></script>
+
+	<script>
+		$(function() {
+			var editBox = $('#modifyMembers');
+			$(".tpl-table-black-operation-modify").click(function() {
+				//  弹出框
+				editBox.modal();
+			});
+
+		});
+	</script>
 
 </body>
 

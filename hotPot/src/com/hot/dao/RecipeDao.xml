@@ -4,4 +4,8 @@
 	<select id="getRecipes" resultType="Recipe">
 		SELECT * FROM hp_recipe;
 	</select>
+	<insert id="addRecipe" parameterType="Recipe">
+		INSERT INTO hp_recipe (rname,rsort,rbid,rprice,rstock,rstate,rimage)
+		VALUES(#{rname},#{rsort},#{rbid},#{rprice},#{rstock},#{rstate},#{rimage})
+	</insert>
 </mapper>

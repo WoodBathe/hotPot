@@ -229,7 +229,7 @@
 				</a>
 					<ul class="sidebar-nav sidebar-nav-sub">
 						<li class="sidebar-nav-link"><a
-							href="<%=basePath%>jsp/members.jsp"> <span
+							href="<%=basePath%>customer/customerList.do"> <span
 								class="am-icon-angle-right sidebar-nav-link-logo"></span> 会员列表
 						</a></li>
 
@@ -366,7 +366,7 @@
 													<td>${desk.dstate}</td>
 													<td>
 														<div class="tpl-table-black-operation">
-															<a href="javascript:;"> <i class="am-icon-pencil"></i>
+															<a href="javascript:;" class="tpl-table-black-operation-list"> <i class="am-icon-pencil"></i>
 																查看订单
 															</a> <a href="javascript:;"
 																class="tpl-table-black-operation-del" id="${desk.did}">
@@ -395,6 +395,7 @@
 								</div>
 
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -456,16 +457,62 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="am-form-group">
-							<div class="am-u-sm-12 am-u-sm-push-12" style="margin-top: 10px;">
-								<button type="button"
-									class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
-							</div>
-						</div>
-
 					</form>
-
+					<div class="am-form-group">
+						<div class="am-u-sm-12 am-u-sm-push-12" style="margin-top: 10px;">
+							<button type="button"
+								class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+						</div>
+					</div>
 				</div>
+
+			</div>
+		</div>
+		
+		<div class="am-modal am-modal-no-btn-list" id="calendar-edit-box-list"
+			style="width: 100%; margin: auto;">
+			<div class="am-modal-dialog tpl-model-dialog-list" style="width: 55%;">
+				<div class="am-modal-hd">
+					<a href="javascript: void(0)"
+						class="am-close edit-box-close am-close-spin" data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd tpl-am-model-bd am-cf" id="calendar-edit-box-list">
+
+					<form class="am-form tpl-form-border-form">
+						<div class="am-u-sm-12">
+							<table width="100%"
+								class="am-table am-table-compact am-table-striped tpl-table-black ">
+								<thead>
+									<tr>
+										<th>图片</th>
+										<th>名称</th>
+										<th>类别</th>
+										<th>进价</th>
+										<th>售价</th>
+										<th>库存</th>
+										<th>是否热门</th>
+										<th>已选数量</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="gradeX">
+										<td><img src="<%=basePath%>assets/img/k.jpg"
+											class="tpl-table-line-img" alt=""></td>
+										<td class="am-text-middle">羊肉卷</td>
+										<td class="am-text-middle">荤菜</td>
+										<td class="am-text-middle">15</td>
+										<td class="am-text-middle">34</td>
+										<td class="am-text-middle">100</td>
+										<td class="am-text-middle">热门</td>
+										<td class="am-text-middle">3</td>
+									</tr>
+									<!-- more data -->
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
 			</div>
 		</div>
 
@@ -488,6 +535,14 @@
 				$(".tpl-table-black-operation-del").click(function() {
 					//  弹出框
 					editBox.modal();
+				});
+
+			});
+			$(function() {
+				var editBox1 = $('#calendar-edit-box-list');
+				$(".tpl-table-black-operation-list").click(function() {
+					//  弹出框
+					editBox1.modal();
 				});
 
 			});

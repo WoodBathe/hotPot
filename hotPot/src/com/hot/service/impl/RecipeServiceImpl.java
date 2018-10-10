@@ -21,4 +21,10 @@ public class RecipeServiceImpl implements RecipeService {
 		// TODO Auto-generated method stub
 		return recipeDao.getRecipes();
 	}
+
+	@Override
+	public int addRecipe(Recipe recipe) {
+		// TODO Auto-generated method stub
+		return recipeDao.addRecipe(recipe);
+	}
 }
